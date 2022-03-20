@@ -44,6 +44,14 @@ export default function App() {
             </div>
           </div>
         </div>
+        <p className="footer">
+          {" "}
+          <a href="https://github.com/Htibbs14/react-weather" target="_blank">
+            {" "}
+            Open-source code
+          </a>
+          , by Hailey Tibbens
+        </p>
       </div>
     </div>
   );
