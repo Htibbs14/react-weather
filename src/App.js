@@ -46,7 +46,11 @@ export default function App() {
         </div>
         <p className="footer">
           {" "}
-          <a href="https://github.com/Htibbs14/react-weather" target="_blank">
+          <a
+            href="https://github.com/Htibbs14/react-weather"
+            target="_blank"
+            rel="noreferrer"
+          >
             {" "}
             Open-source code
           </a>
