@@ -2,37 +2,166 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background: linear-gradient(
+    109.6deg,
+    rgb(223, 234, 247) 11.2%,
+    rgb(244, 248, 252) 91.1%
+  );
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1 {
+  text-align: center;
+  color: black;
+  font-weight: bolder;
+  font-size: 32px;
+}
+h2 {
+  text-align: center;
+  font-size: 15px;
+  color: rgb(61, 56, 56);
+}
+h3 {
+  text-align: center;
+  font-size: 13px;
+  color: rgb(61, 56, 56);
+}
+h3:first-letter {
+  text-transform: capitalize;
+}
+form {
+  text-align: center;
+  padding: 10px;
+  padding-top: 20px;
+}
+row {
+  text-align: center;
+}
+img {
+  position: relative;
+  bottom: 15px;
+}
+ul {
+  font-size: 13px;
+  padding: 0;
+}
+li {
+  list-style: None;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+small {
+  text-align: center;
+  margin-bottom: 10px;
+}
+a {
+  text-decoration: none;
+  color: blue;
+}
+hr {
+  width: 400px;
+  position: relative;
+  right: -40px;
+  color: rgb(160, 158, 158);
 }
 
-.App-link {
-  color: #61dafb;
+#currentButton {
+  padding: 3px 10px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 15px;
+  background-color: #c78eec;
+  border-color: #9ad0ec;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#currentButton:hover {
+  background-color: #a45fd3;
+}
+
+.search-box {
+  border-color: rgb(179, 175, 175);
+}
+.btn-primary {
+  background-color: #c78eec;
+  border-color: #9ad0ec;
+  font-weight: 500;
+}
+
+.btn-primary:hover {
+  background-color: #a45fd3;
+}
+.search {
+  border-radius: 4px;
+  font-weight: 500;
+  background-color: #d0a5ec;
+  border-color: #9ad0ec;
+}
+.tempInfo {
+  text-align: center;
+  font-weight: bold;
+  margin: 0;
+}
+.main-temp {
+  padding-right: 4px;
+  font-size: 62px;
+  margin: 0;
+  color: black;
+}
+.col-sm-5 {
+  color: rgb(61, 56, 56);
+}
+#weather-container {
+  padding-top: 0;
+  max-width: 500px;
+}
+.container {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  max-width: 500px;
+}
+.main-emoji {
+  font-size: 50px;
+  margin-right: 5px;
+}
+.temp-types {
+  font-size: 15px;
+  font-weight: normal;
+  position: relative;
+  bottom: 32px;
+}
+.main-card {
+  border-width: px;
+  padding: 5px;
+  width: 500px;
+  margin: 0 auto;
+  border-radius: 12px;
+  border-color: #d0a5ec;
+}
+
+a:hover {
+  color: rgb(179, 10, 142);
+}
+
+.col-2 {
+  text-align: center;
+  line-height: 1px;
+}
+.weather-forecast {
+  color: rgb(61, 56, 56);
+}
+.weather-forecast-img {
+  padding-top: 30px;
+  padding-bottom: 0;
+}
+.weather-forecast-temps {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 500;
+}
+.weather-forecast-temps-min {
+  color: darkgrey;
+}
+.weather-forecast-date {
+  font-weight: 600;
 }
