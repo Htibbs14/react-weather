@@ -1,14 +1,12 @@
 import React, { useState } from "react";
 import axios from "axios";
-import FormattedDate from "./FormattedDate";
+import WeatherData from "./WeatherData";
 import "./App.css";
 
-export default function Weather(props) {
+export default function WeatherSearch(props) {
   let [weatherInfo, setWeatherInfo] = useState({ ready: false });
 
   function showTempInfo(response) {
-    console.log(response.data);
-
     setWeatherInfo({
       temperature: Math.round(response.data.main.temp),
       city: response.data.name,
@@ -50,43 +48,7 @@ export default function Weather(props) {
                   </div>
                 </form>
               </div>
-              <h1>{props.defaultCity}</h1>
-              <h2>
-                <FormattedDate date={weatherInfo.date} />
-              </h2>
-              <h3>{weatherInfo.description}</h3>
-              <div className="container" id="weather-container">
-                <div className="row">
-                  <div className="col-7">
-                    <div className="tempInfo">
-                      <span>
-                        <img
-                          src={`https://openweathermap.org/img/wn/${weatherInfo.icon}@2x.png`}
-                          alt=""
-                          className="main-emoji"
-                          id="icon"
-                        />
-                      </span>
-                      <span className="main-temp">
-                        {weatherInfo.temperature}
-                      </span>
-                      <span className="temp-types">
-                        <span id="far">°F</span>
-                      </span>
-                    </div>
-                  </div>
-                  <div className="col-sm-5">
-                    <span className="col-sm--5">
-                      <ul>
-                        <br />
-                        <li>Feels like {weatherInfo.feelsLike}°F</li>
-                        <li>Humidity {weatherInfo.humidity}%</li>
-                        <li>Wind {weatherInfo.wind} km/h</li>
-                      </ul>
-                    </span>
-                  </div>
-                </div>
-              </div>
+              <WeatherData data={weatherInfo} />
             </div>
           </div>
           <p className="footer">

@@ -1,11 +1,11 @@
 import React from "react";
-import Weather from "./Weather";
+import WeatherSearch from "./WeatherSearch";
 import "./App.css";
 
 export default function App() {
   return (
     <div>
-      <Weather defaultCity="New York" />
+      <WeatherSearch defaultCity="New York" />
     </div>
   );
 }
