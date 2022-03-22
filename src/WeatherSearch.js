@@ -4,7 +4,8 @@ import WeatherData from "./WeatherData";
 import "./App.css";
 
 export default function WeatherSearch(props) {
-  let [weatherInfo, setWeatherInfo] = useState({ ready: false });
+  const [weatherInfo, setWeatherInfo] = useState({ ready: false });
+  const [city, setCity] = useState(props.defaultCity);
 
   function showTempInfo(response) {
     setWeatherInfo({
@@ -20,6 +21,21 @@ export default function WeatherSearch(props) {
     });
   }
 
+  function search() {
+    const apiKey = "c176156c8c25cae90d4b83c175b81e5f";
+    let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    axios.get(apiURL).then(showTempInfo);
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    search();
+  }
+
+  function handleCityChange(event) {
+    setCity(event.target.value);
+  }
+
   if (weatherInfo.ready) {
     return (
       <div className="Weather">
@@ -27,7 +43,7 @@ export default function WeatherSearch(props) {
           <div className="card main-card">
             <div className="card-body">
               <div className="Search">
-                <form className="mb-3">
+                <form className="mb-3" onSubmit={handleSubmit}>
                   <div className="row">
                     <div className="col-9">
                       <input
@@ -36,6 +52,8 @@ export default function WeatherSearch(props) {
                         className="form-control"
                         id="type-city"
                         autoComplete="off"
+                        onChange={handleCityChange}
+                        value={city}
                       />
                     </div>
                     <div className="col-3">
@@ -67,9 +85,7 @@ export default function WeatherSearch(props) {
       </div>
     );
   } else {
-    const apiKey = "c176156c8c25cae90d4b83c175b81e5f";
-    let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
-    axios.get(apiURL).then(showTempInfo);
+    search();
     return <h2>Loading...</h2>;
   }
 }
