@@ -108,7 +108,7 @@ hr {
   color: rgb(61, 56, 56);
 }
 #weather-container {
-  padding-top: 0;
+  padding: 0 0 20px 0;
   max-width: 500px;
 }
 .container {
@@ -143,24 +143,28 @@ a:hover {
   text-align: center;
   line-height: 1px;
 }
-.weather-forecast {
-  color: rgb(61, 56, 56);
-}
 .weather-forecast-img {
   padding-top: 30px;
   padding-bottom: 0;
 }
-.weather-forecast-temps {
+.ForecastMaxTemp {
   margin: 0;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 500;
 }
-.weather-forecast-temps-min {
+.ForecastMinTemp {
   color: darkgrey;
+  font-size: 13px;
+  margin: 0;
 }
-.weather-forecast-date {
+.ForecastDays {
   font-weight: 600;
 }
 .footer {
   font-size: 12px;
+}
+
+.WeatherForecast {
+  text-align: center;
+  color: rgb(61, 56, 56);
 }
