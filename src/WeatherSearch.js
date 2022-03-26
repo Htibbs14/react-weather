@@ -9,6 +9,7 @@ export default function WeatherSearch(props) {
   const [city, setCity] = useState(props.defaultCity);
 
   function showTempInfo(response) {
+    console.log(response.data);
     setWeatherInfo({
       temperature: Math.round(response.data.main.temp),
       city: response.data.name,
@@ -18,6 +19,7 @@ export default function WeatherSearch(props) {
       wind: Math.round(response.data.wind.speed),
       description: response.data.weather[0].description,
       icon: response.data.weather[0].icon,
+      coordinates: response.data.coord,
       ready: true,
     });
   }
@@ -68,7 +70,10 @@ export default function WeatherSearch(props) {
                 </form>
               </div>
               <WeatherData data={weatherInfo} />
-              <WeatherForecast />
+              <WeatherForecast
+                data={weatherInfo}
+                coord={weatherInfo.coordinates}
+              />
             </div>
           </div>
           <p className="footer">

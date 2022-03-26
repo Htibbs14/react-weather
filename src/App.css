@@ -33,7 +33,7 @@ form {
 row {
   text-align: center;
 }
-img {
+.tempInfo img {
   position: relative;
   bottom: 15px;
 }
@@ -143,21 +143,23 @@ a:hover {
   text-align: center;
   line-height: 1px;
 }
-.weather-forecast-img {
-  padding-top: 30px;
+.ForecastIcons img {
   padding-bottom: 0;
+  margin: 0;
+  width: 60px;
 }
 .ForecastMaxTemp {
   margin: 0;
   font-size: 13px;
   font-weight: 500;
+  padding: 0;
 }
 .ForecastMinTemp {
   color: darkgrey;
   font-size: 13px;
   margin: 0;
 }
-.ForecastDays {
+.ForecastDay {
   font-weight: 600;
 }
 .footer {

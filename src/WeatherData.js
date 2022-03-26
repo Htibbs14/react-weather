@@ -18,8 +18,6 @@ export default function WeatherData(props) {
                 <img
                   src={`https://openweathermap.org/img/wn/${props.data.icon}@2x.png`}
                   alt=""
-                  className="main-emoji"
-                  id="icon"
                 />
               </span>
               <WeatherTemperature celsius={props.data.temperature} />
